@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "structlog-gcp" %}
 {% set version = "0.2.4" %}
 
@@ -6,21 +7,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/structlog_gcp-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/structlog_gcp-{{ version }}.tar.gz
   sha256: c3013afdea46b60afce48f8f8cd7c891f57747456cfcada82113866fe67eefe9
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - hatchling
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - structlog
 
 test:
@@ -30,6 +31,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   summary: A structlog set of processors to output as Google Cloud Logging format
