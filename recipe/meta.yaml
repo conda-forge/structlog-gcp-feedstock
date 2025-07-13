@@ -1,13 +1,13 @@
 {% set name = "structlog-gcp" %}
-{% set version = "0.2.4" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/structlog_gcp-{{ version }}.tar.gz
-  sha256: c3013afdea46b60afce48f8f8cd7c891f57747456cfcada82113866fe67eefe9
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/structlog_gcp-{{ version }}.tar.gz
+  sha256: 361da96886023e6fb8fa49f60f5278aff666820c8987534ca61e091b32047592
 
 build:
   noarch: python
