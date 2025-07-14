@@ -9,6 +9,8 @@ Package license: MIT
 
 Summary: A structlog set of processors to output as Google Cloud Logging format
 
+Development: https://github.com/multani/structlog-gcp
+
 Current build status
 ====================
 
