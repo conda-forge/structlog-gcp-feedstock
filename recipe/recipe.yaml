@@ -32,8 +32,14 @@ tests:
   - python:
       imports:
         - structlog_gcp
-      pip_check: true
       python_version: ${{ python_min }}.*
+      pip_check: true
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
 
 about:
   summary: A structlog set of processors to output as Google Cloud Logging format
