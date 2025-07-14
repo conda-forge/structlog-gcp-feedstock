@@ -47,6 +47,7 @@ about:
   license_file: LICENSE
   repository: https://github.com/multani/structlog-gcp
   homepage: https://github.com/multani/structlog-gcp
+  documenttation: https://github.com/multani/structlog-gcp/blob/main/README.md
 
 extra:
   recipe-maintainers:
